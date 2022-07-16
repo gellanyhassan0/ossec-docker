@@ -18,11 +18,13 @@ send alert notifications.
 
 **Launch with a specified Volume:**
 
-
+        docker image build -t gellany_ossec-docker /home/go/ossec-docker
+	
 	docker volume create ossec-data
 
 
         docker run -d -p 1514:1514/udp -p 1515:1515/tcp -v ossec-data:/var/ossec/data --name ossec-server atomicorp/ossec-docker
+	
 
 
 **Stopping:**
